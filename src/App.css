@@ -140,3 +140,37 @@ body { margin: 0; font-family: "Segoe UI"; }
   opacity: 1;
 }
 
+@media (max-width: 600px) {
+
+  .sidebar {
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+    height: 100vh;
+  }
+
+  .chat-window {
+    width: 100%;
+  }
+
+  .message {
+    max-width: 85%;
+    font-size: 14px;
+  }
+
+  .input-box {
+    padding: 6px;
+  }
+
+  .input-box input {
+    font-size: 14px;
+  }
+
+  .top-bar {
+    padding: 8px;
+  }
+
+  .menu-btn, .theme-btn {
+    font-size: 18px;
+  }
+}
