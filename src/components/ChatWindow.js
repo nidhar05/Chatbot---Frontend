@@ -17,7 +17,7 @@ export default function ChatWindow({ dark, setDark, history, setHistory, sidebar
 
 
 
-        fetch("http://10.10.168.91:8080/api/chat", {
+        fetch("https://chatbot-backend-2-2gcq.onrender.com/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: input })
@@ -52,7 +52,7 @@ export default function ChatWindow({ dark, setDark, history, setHistory, sidebar
 
         setLoading(true);
 
-        fetch("http://10.10.168.91:8080/api/chat", {
+        fetch("https://chatbot-backend-2-2gcq.onrender.com/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: value })
