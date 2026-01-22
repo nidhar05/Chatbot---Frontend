@@ -20,17 +20,10 @@ export default function ChatWindow({ dark, setDark, history, setHistory, sidebar
         fetch("https://chatbot-backend-2-2gcq.onrender.com/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: input })
-        })
-            .then(res => res.json())
-            .then(data => {
-                setHistory(prev =>
-                    prev.map((item, i) =>
-                        i === prev.length - 1 ? { ...item, bot: data.reply } : item
-                    )
-                );
-                setLoading(false);
-            });
+            body: JSON.stringify({
+                message: input
+            })
+        });
 
     };
 
